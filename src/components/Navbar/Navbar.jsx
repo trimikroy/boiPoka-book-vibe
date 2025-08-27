@@ -2,12 +2,12 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
-    const link = <>
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><a>Item 3</a></li>
+    const link = < >
+        <li className='font-work-sans'><NavLink to="/">Home</NavLink></li>
+        <li className='font-work-sans'><NavLink to='dashboard'>Dashboard</NavLink></li>
     </>
     return (
-        <div className="navbar bg-base-100 shadow-sm">
+        <div className="navbar  mt-4">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -19,15 +19,16 @@ const Navbar = () => {
                         {link}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">daisyUI</a>
+                <div className='text-2xl font-semibold font-work-sans '><NavLink >Book Vibe</NavLink></div>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     {link}
                 </ul>
             </div>
-            <div className="navbar-end">
-                <a className="btn">Button</a>
+            <div className="navbar-end  flex gap-4 ">
+                <a className="btn text-[#FFFFFF] bg-[#23BE0A]">Sign In</a>
+                <a className="btn text-[#FFFFFF] bg-[#59C6D2]">Sign Up</a>
             </div>
         </div>
     );
